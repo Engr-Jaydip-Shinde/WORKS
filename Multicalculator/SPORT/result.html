@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Styling for Result Page */
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff7e5f;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #f1f1f1;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .sport-icon {
+            font-size: 100px;
+            color: #ff7e5f;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #ff7e5f;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background-color: #feb47b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sport-icon">
+            <i class="fas fa-futbol"></i> <!-- Placeholder for icon, can change based on sport -->
+        </div>
+        <h1 id="sport-name"></h1>
+        <p id="sport-description"></p>
+        <a href="index.html" class="button">Take the Quiz Again</a>
+    </div>
+
+    <!-- FontAwesome for Icons (optional) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Retrieve query parameters
+        const params = new URLSearchParams(window.location.search);
+        const sportName = params.get('sport');
+        const description = params.get('description');
+
+        // Set the sport name and description
+        document.getElementById('sport-name').textContent = `We Recommend: ${sportName}`;
+        document.getElementById('sport-description').textContent = description;
+
+        // Optionally, change icon based on sport
+        const sportIcons = {
+            'Soccer': 'fas fa-futbol',
+            'Basketball': 'fas fa-basketball-ball',
+            'Yoga': 'fas fa-yoga',
+            'Swimming': 'fas fa-swimmer',
+            'Cycling': 'fas fa-bicycle',
+            'Tennis': 'fas fa-table-tennis',
+            'Football': 'fas fa-football-ball',
+            'Table Tennis': 'fas fa-table-tennis',
+            'Running': 'fas fa-running',
+            'Badminton': 'fas fa-badminton'
+        };
+
+        // Change the icon based on sport
+        document.querySelector('.sport-icon i').className = sportIcons[sportName] || 'fas fa-futbol';
+    </script>
+</body>
+</html>
