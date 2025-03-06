@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="atm">
+        <div class="screen">
+            <h2>Welcome to ATM</h2>
+            <div id="menu">
+                <button onclick="showCreateAccount()">Create Account</button>
+                <button onclick="showOptions()" id="account-btn" disabled>Login</button>
+            </div>
+
+            <div id="account-section" class="hidden">
+                <h3>Create New Account</h3>
+                <input type="text" id="account-name" placeholder="Enter Name">
+                <input type="number" id="initial-balance" placeholder="Initial Balance">
+                <button onclick="createAccount()">Create Account</button>
+            </div>
+
+            <div id="operations-section" class="hidden">
+                <h3>Welcome, <span id="user-name"></span></h3>
+                <p>Balance: ₹<span id="balance">0</span></p>
+                <button onclick="checkBalance()">Check Balance</button>
+                <button onclick="showDeposit()">Deposit</button>
+                <button onclick="showWithdraw()">Withdraw</button>
+                <button onclick="logout()">Exit</button>
+            </div>
+
+            <div id="transaction-section" class="hidden">
+                <h3 id="transaction-title"></h3>
+                <input type="number" id="amount" placeholder="Enter Amount">
+                <button onclick="performTransaction()">Submit</button>
+                <button onclick="goBack()">Cancel</button>
+            </div>
+        </div>
+        <div class="keypad">
+            <button onclick="enterDigit(1)">1</button>
+            <button onclick="enterDigit(2)">2</button>
+            <button onclick="enterDigit(3)">3</button>
+            <button onclick="enterDigit(4)">4</button>
+            <button onclick="enterDigit(5)">5</button>
+            <button onclick="enterDigit(6)">6</button>
+            <button onclick="enterDigit(7)">7</button>
+            <button onclick="enterDigit(8)">8</button>
+            <button onclick="enterDigit(9)">9</button>
+            <button onclick="enterDigit(0)">0</button>
+            <button onclick="clearAmount()">Clear</button>
+            <button onclick="submitAmount()">Enter</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
