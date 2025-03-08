@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBoost - Stay Motivated & Productive</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="profile">
+            <img src="download.jpeg" alt="Profile" class="profile-icon">
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+
+        <button class="open-timer-btn" onclick="openTimerModal()"></button>
+    </header>
+
+
+    <div id="timerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTimerModal()">&times;</span>
+            <h2>Set Pomodoro Timer</h2>
+            <label for="timeInput">Enter time (minutes): </label>
+            <input type="number" id="timeInput" min="1" value="25">
+            <button onclick="setTimer()">Set</button>
+            <button onclick="startTimer()">Start</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+    </div>
+
+    <!-- Floating Timer Display -->
+    <div id="floatingTimer" class="floating-timer">
+        <p id="timerDisplay">25:00</p>
+    </div>
+
+    <!-- Scrolling Quotes Section -->
+
+  
+    <div class="carousel-container">
+        <div class="carousel">
+          <div class="quote-slide">
+            <p class="quote">"The best way to predict the future is to invent it."</p>
+            <p class="author">- Alan Kay</p>
+          </div>
+          <div class="quote-slide">
+            <p class="quote">"Success usually comes to those who are too busy to be looking for it."</p>
+            <p class="author">- Henry David Thoreau</p>
+          </div>
+          <div class="quote-slide">
+            <p class="quote">"Don’t be afraid to give up the good to go for the great."</p>
+            <p class="author">- John D. Rockefeller</p>
+          </div>
+          <div class="quote-slide">
+            <p class="quote">"The best way to predict the future is to invent it."</p>
+            <p class="author">- Alan Kay</p>
+          </div>
+          <div class="quote-slide">
+            <p class="quote">"Success usually comes to those who are too busy to be looking for it."</p>
+            <p class="author">- Henry David Thoreau</p>
+          </div>
+          <div class="quote-slide">
+            <p class="quote">"Don’t be afraid to give up the good to go for the great."</p>
+            <p class="author">- John D. Rockefeller</p>
+          </div>
+        </div>
+      </div>
+
+
+    
+    <!-- Main Content with 4 Boxes -->
+    <main class="container">
+
+        <div class="container">
+            <div class="box">
+                <h2>Set Todays Goal</h2>
+                <p>Set Goals That You are Targeting Today...</p>
+                <button onclick="location.href='nextpage.html'"><a href="" style="text-decoration: none; color: black;">SET GOALS..</a></button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="box">
+                <h2> Study Material</h2>
+                <p>See Or Read Or store you study material...</p>
+                <button onclick="location.href='nextpage.html'"><a href="" style="text-decoration: none; color: black;">Explore..</a></button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="box">
+                <h2> Calculator</h2>
+                <p>You can Make Your Calculations Here...</p>
+                <button onclick="location.href='nextpage.html'"><a href="/Calculator/indexC.html" style="text-decoration: none; color: black;">USE..</a></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <h2> Games</h2>
+                <p>Engage in discussions, webinars, and Q&A sessions!</p>
+                <button onclick="location.href='nextpage.html'"><a href="" style="text-decoration: none; color: black;">PLAY..</a></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <h2> Videos</h2>
+                <p>Engage in discussions, webinars, and Q&A sessions!</p>
+                <button onclick="location.href='nextpage.html'"><a href="" style="text-decoration: none; color: black;">Search..</a></button>
+            </div>
+        </div>
+        
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>📍 Address: 123 EduBoost Lane, Knowledge City, ED 56789</p>
+            <p>📞 Contact: +123 456 7890</p>
+            <p>📧 Email: support@eduboost.com</p>
+            <p>&copy; 2025 EduBoost. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
